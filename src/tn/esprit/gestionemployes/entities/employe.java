@@ -1,3 +1,4 @@
+package tn.esprit.gestionemployes.entities;
 public class employe implements Comparable<employe> {
 
     private String nom;

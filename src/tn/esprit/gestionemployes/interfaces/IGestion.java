@@ -1,3 +1,4 @@
+package tn.esprit.gestionemployes.interfaces;
 public interface IGestion<T> {
     void ajouterEmploye(T t);
     boolean rechercherEmploye(String nom);

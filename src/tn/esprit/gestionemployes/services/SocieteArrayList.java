@@ -1,8 +1,13 @@
+package tn.esprit.gestionemployes.services;
+
+import tn.esprit.gestionemployes.entities.employe;
+import tn.esprit.gestionemployes.interfaces.IGestion;
+import tn.esprit.gestionemployes.interfaces.IRechercheAvancee;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
 public class SocieteArrayList implements IGestion<employe>, IRechercheAvancee<employe> {
     private List<employe> liste;
     public SocieteArrayList() {
@@ -15,7 +20,6 @@ public class SocieteArrayList implements IGestion<employe>, IRechercheAvancee<em
             liste.add(e);
         }
     }
-
     @Override
     public boolean rechercherEmploye(String nom) {
         if (nom == null) return false;

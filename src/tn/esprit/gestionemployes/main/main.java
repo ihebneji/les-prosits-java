@@ -1,10 +1,48 @@
+package tn.esprit.gestionemployes.main;
+import tn.esprit.gestionemployes.entities.Departement;
+import tn.esprit.gestionemployes.services.DepartementHashSet;
+import tn.esprit.gestionemployes.entities.*;
+import tn.esprit.gestionemployes.services.*;
 import java.util.List;
-
 public class main {
     public static void main(String[] args) {
-        SocieteArrayList societe = new SocieteArrayList();
+        DepartementHashSet service = new DepartementHashSet();
+         SocieteArrayList societe = new SocieteArrayList();
 
 
+        Departement d1 = new Departement(1, "It", 10);
+        Departement d2 = new Departement(2, "RH", 5);
+        Departement d3 = new Departement(3, "Compta", 8);
+
+        service.ajouterDepartement(d1);
+        service.ajouterDepartement(d2);
+        service.ajouterDepartement(d3);
+
+        System.out.println("\n Recherche par nom : " + service.rechercherDepartement("RH"));
+
+        System.out.println("\n Liste des departements :");
+        service.afficherDepartements();
+
+        System.out.println("\n Tri par ID :");
+        service.trierDepartementsParId();
+
+        System.out.println("\n Tri par Nom et Nombre d Employe :");
+        service.trierDepartementsParNomEtNombreEmployes();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
         societe.ajouterEmploye(new employe(3, "neji", "iheb", "IT", 2));
         societe.ajouterEmploye(new employe(1, "ben Saad", "3li", "compta", 1));
         societe.ajouterEmploye(new employe(2, "Khaled", "Ibrahim", "IT", 1));
@@ -42,6 +80,6 @@ public class main {
 
         societe.supprimerEmploye(test);
         System.out.println("\n Après suppression ");
-        societe.displayEmploye();
+        societe.displayEmploye();*/
     }
-}
+
